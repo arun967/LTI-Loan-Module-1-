@@ -53,14 +53,7 @@ background-size: cover;
  
                   <label>Aadhaar Card:<br>
  <input type="file" name="uploadField" />	</label>					</div>
-					
-					
-				
-					
-					
-					
-					
-					
+	
 					
 					      <input type="submit" value="submit">
 

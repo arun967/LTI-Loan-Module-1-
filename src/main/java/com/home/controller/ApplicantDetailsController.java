@@ -90,6 +90,10 @@ public class ApplicantDetailsController {
 		System.out.println("INSIDE APPLICANT CONTROLLER");
 		adao.saveApplicantData(a);
 		adao.saveAddressData(ad);
+		/*ModelAndView mv = new ModelAndView();
+          String appid = a.getApplicantId();
+         */
+		//return new ModelAndView("applied","appid",appid);
 		return new ModelAndView("applied");
 	}
 	

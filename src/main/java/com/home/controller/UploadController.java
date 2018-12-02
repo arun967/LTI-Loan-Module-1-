@@ -29,7 +29,7 @@ public class UploadController {
 /**
  * Upload single file using Spring Controller
  */
-@RequestMapping(value = "/upload", method = RequestMethod.POST)
+/*@RequestMapping(value = "/upload", method = RequestMethod.POST)
 public @ResponseBody
 String uploadFileHandler(@RequestParam("name") String name,
 		@RequestParam("file") MultipartFile file) {
@@ -63,7 +63,7 @@ String uploadFileHandler(@RequestParam("name") String name,
 		return "You failed to upload " + name
 				+ " because the file was empty.";
 	}
-}
+}*/
 
 /**
  * Upload multiple file using Spring Controller
@@ -87,11 +87,12 @@ String uploadMultipleFileHandler(@RequestParam("uploadField") MultipartFile[] fi
 			byte[] bytes = file.getBytes();
 
 			// Creating the directory to store file
-			String rootPath = System.getProperty("catalina.home");
-			File dir = new File(rootPath + File.separator + "regfiles");
-			if (!dir.exists())
-				dir.mkdirs();
-
+		 String rootpath = System.getProperty("catalina.home");
+		 File dir = new File(rootpath+ File.separator +"regfiles");
+		    if(!dir.exists()) {
+		    	dir.mkdir();
+		    }
+		    
 			// Create the file on server
 			File serverFile = new File(dir.getAbsolutePath()
 					+ File.separator + name);

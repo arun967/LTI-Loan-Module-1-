@@ -72,8 +72,13 @@
 	
 	<bean id="ldao" class="com.home.dao.ApplicantLoginDao">
 		<property name="jdbcTemplate" ref="jdbcTemplate">
+		</property> 
+		</bean>
+		
+		
+	<bean id="ddao" class="com.home.dao.DocDownloadDao">
+		<property name="jdbcTemplate" ref="jdbcTemplate">
 		</property>
 	</bean>
-	
-	
+		
 </beans>
