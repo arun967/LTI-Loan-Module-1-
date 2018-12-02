@@ -1,0 +1,51 @@
+@charset "ISO-8859-1";
+
+*{
+	margin:0;
+	padding:0;
+}
+
+h1{
+	text-align:center;
+	padding:20px;
+}
+h3{
+	text-align:center;
+	padding:20px;
+}
+.application
+{
+	background: cyan;
+	width:500px;
+	margin:0px 0px 0px 430px;
+	color: white;
+	font-size: 18;
+	padding: 20px;
+	border-radius: 10px;
+	
+}
+#application{
+	margin-left:50px;
+	
+}
+label{
+	color:black;
+	font-family: sans-serif;
+	font-size: 18px;
+	font-style: bold;
+}
+#name{
+	
+	width:65px;
+	padding:7px;
+	border-radius: 3px;
+	outline:0;
+	padding:7px;
+	}
+	#ph{
+	width:65px;
+	padding:7px;
+	border-radius: 3px;
+	outline:0;
+	border:none;
+	}

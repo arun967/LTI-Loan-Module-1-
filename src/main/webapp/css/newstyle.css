@@ -1,0 +1,28 @@
+@charset "ISO-8859-1";
+.bg{
+background: url('css/image8.jpg') no-repeat;
+background-size: cover;
+}
+#log
+{
+padding: 60px 40px;
+margin-top: 0px;
+-webkit-box-shadow: -5px 2px 62px 8px rgba(0,0,0,0.75);
+-moz-box-shadow: -5px 2px 62px 8px rgba(0,0,0,0.75);
+box-shadow: -5px 2px 62px 8px rgba(0,0,0,0.75);
+}
+h1 {
+	color: white;
+	text-align: center;
+	font-weight: bolder;
+	
+}
+label{
+font-size: 20px;
+color: white;
+}
+button
+{-webkit-box-shadow: 10px 10px 5px -45px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 5px -45px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 5px -45px rgba(0,0,0,0.75);
+}
