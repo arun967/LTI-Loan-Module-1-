@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-    <%@ page isErrorPage = "true" %>
+	pageEncoding="ISO-8859-1"%>
+<%@ page isErrorPage="true"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page isELIgnored="false"%>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -8,8 +11,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>CONGRATULATIONS</h1>
-<h2>YOU HAVE SUCCESSFULLY APPLIED<h2>
-<a href ="applicantLogin.jsp">LOGIN INTO YOUR ACCOUNT HERE</a>
+	<h1>CONGRATULATIONS</h1>
+	<h2>
+		YOU HAVE SUCCESSFULLY APPLIED
+		<h2>
+			<a href="applicantLogin.jsp">LOGIN INTO YOUR ACCOUNT HERE</a><br>
+			<br> <a href="docsUpload.jsp">Upload your
+				Documents here</a>
 </body>
 </html>

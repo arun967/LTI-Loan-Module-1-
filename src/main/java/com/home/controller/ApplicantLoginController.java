@@ -21,6 +21,7 @@ import com.home.dao.ApplicantLoginDao;
 import com.home.model.ApplicantDetailsModel;
 import com.home.model.ApplicantLoginModel;
 import com.home.model.DisplayRecordModel;
+import com.home.model.ForgotPasswordModel;
 
 @Controller
 public class ApplicantLoginController { 
@@ -70,6 +71,19 @@ public class ApplicantLoginController {
 		
 		}
 	
+	
+	@RequestMapping("/forgotPassword")
+	public ModelAndView forgotPassword(HttpServletRequest request, HttpServletResponse response , @ModelAttribute ForgotPasswordModel fpm) throws ServletException, IOException{
+		
+		      System.out.println(fpm.getEmailId());
+		      ldao.changePassword(fpm);
+			System.out.println("what usdp");
+			 ModelAndView model=new ModelAndView();
+			
+			 model.setViewName("applicantLogin");
+			 return model;		
+			
+		}
 
 	
 	
@@ -81,9 +95,7 @@ public class ApplicantLoginController {
 		     l.setEmailId(email);
 			 
 		     List<DisplayRecordModel> lst = ldao.displayLoanRecord(l);
-			
-			 
-			 
+
 			 ModelAndView model=new ModelAndView();
 			 model.addObject("list", lst);
 			 model.setViewName("yourRecord");

@@ -12,35 +12,22 @@
 <body>
 <div class="loginbox">
 <img src="images/login1.jpg" class="logo">
-<h1>Login here</h1>
-<form action="login">
+<h1>change your password here</h1>
+<form action="forgotPassword">
 <div class="form-group">
 <p>Enter your Email</p>
 <input type="email" name="emailId" id="emailId" placeholder="Enter Email"><br></div>
 <div class="form-group">
-<p>Password</p>
-<input type="password" name="password" id="password" placeholder="Enter Password" ></div>
-<input type="submit" value="Login">
-<a href="forgotPassword.jsp"> Forgot Password?</a><br>
-<a href="propertyDetails"> Don't have An Account?</a>
+<p>Enter your new Password</p>
+<input type="password" name="newPassword" id="password" placeholder="Enter new Password" ></div>
+<input type="submit" value="Change Password">
+
 
 </form>
 
 </div>
 
-<script src="css/bootstrap-validate.js"></script>
-<script>
 
-bootstrapValidate(
-		   '#emailId', 'email:Enter VAlid Email address'
-		   
-		);
-bootstrapValidate(
-		   '#password', 'regex:^.*(?=.{8,})(?=..*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).*$:At least 8 chars consisting 1 digit,one lowercase,uppercase,special characters,no space tab etc'
-  
-		   
-		);
-		</script>
 		
 </body>
 </html>

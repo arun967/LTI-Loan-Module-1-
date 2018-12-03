@@ -11,6 +11,7 @@ import com.home.dao.ApplicantLoginDao.ApplicantdetailsMapper;
 import com.home.model.AdminLoginModel;
 import com.home.model.ApplicantDetailsModel;
 import com.home.model.ApplicantLoginModel;
+import com.home.model.ForgotPasswordModel;
 
 
 
@@ -23,8 +24,8 @@ private JdbcTemplate jdbctemplate;
 	}
     private JdbcTemplate getJdbcTemplate() {
 		return jdbctemplate;
-    }
-	
+    } 
+    
 public AdminLoginModel validateAdmin(AdminLoginModel l) {
 	    
 		String sql = "select * from gr8_admin where admin_id='"+l.getAdminId()+"'and password='"+l.getPassword()+"'";

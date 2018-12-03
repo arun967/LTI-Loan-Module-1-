@@ -11,6 +11,7 @@ import org.springframework.jdbc.core.RowMapper;
 import com.home.model.ApplicantDetailsModel;
 import com.home.model.ApplicantLoginModel;
 import com.home.model.DisplayRecordModel;
+import com.home.model.ForgotPasswordModel;
 
 public class ApplicantLoginDao {
 private JdbcTemplate jdbctemplate;
@@ -38,6 +39,18 @@ private JdbcTemplate jdbctemplate;
 		     return firstName1;
 	    }
 	  
+	 
+	   public void changePassword(ForgotPasswordModel fpm) {
+	    	
+		   String query1 = "update gr8_applicant_details set password ='"+fpm.getNewPassword()+"',confirm_password ='"+fpm.getNewPassword()+"' where email_id ='"+fpm.getEmailId()+"'";
+		  System.out.println("djjjjjjjjjjjjjjjj");
+		   jdbctemplate.update(query1);
+	  	System.out.println("djjjjjjjjjjj2222222222");
+	    }
+	    
+	 
+	 
+	 
 	 public String getLoanStatus(ApplicantLoginModel l) 
 	    {
 		     
@@ -123,6 +136,9 @@ class ApplicantdetailsMapper implements RowMapper<ApplicantDetailsModel> {
 	    return applicantdetails;
 	}
 }
+
+
+
 
 
 
